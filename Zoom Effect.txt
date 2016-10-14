@@ -1,0 +1,45 @@
+--------------------------------------------------------------
+#                                                            #
+#          Zoom Effect For MONO Slider Backgrounds           #
+#                                                            #
+#          Example: http://www.amgcarsalesltd.co.uk          #
+#                                                            #
+--------------------------------------------------------------
+
+<!-- THIS WILL ZOOM ANY AND ALL CONTENT ON THE SLIDER -->
+<!-- WORKS BEST WITH NO CONTENT / ONLY AUTOSPACER ON  -->
+<!-- THE SLIDER.                                      -->
+
+
+#############################################
+#                                           #
+#             Global Custom CSS             #
+#                                           #
+#############################################
+
+ 
+ @-webkit-keyframes zoomin {
+                0% {
+                    -webkit-transform: scale(1.1);
+                }
+
+                100% {
+                    -webkit-transform: scale(1);
+                }
+            }
+
+            @keyframes zoomin {
+                0% {
+                    transform: scale(1.1);
+                }
+
+                100% {
+                    transform: scale(1);
+                }
+            }
+
+            [data-active="true"], .rowGroup .row:first-child {
+                -webkit-animation: zoomin 5s 1 ease-in-out;
+                animation: zoomin 5s 1 ease-in-out;
+                transition: transform 0.4s ease;
+            }
